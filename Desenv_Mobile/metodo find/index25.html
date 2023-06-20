@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fruit Search</title>
+
+
+  <body>
+    <h1>Fruit Search</h1>
+    <label for="frutaInput">Enter a fruit:</label>
+    <input type="text" id="frutaInput">
+    <button onclick="Fruit()">Search</button>
+    <p id="resultado"></p>
+  </body>
+
+  
+  <script>
+    function Fruit() {
+      const frutas = ["Maçã", "Banana", "Laranja", "Manga"];
+      const userInput = document.getElementById("frutaInput").value;
+
+      const encontrarFruta = frutas.find((fruta) => fruta.toLowerCase() === userInput.toLowerCase());
+
+      if (encontrarFruta) {
+        document.getElementById("resultado").textContent = "Encontrado: " + encontrarFruta;
+      } else {
+        document.getElementById("resultado").textContent = "Fruta não achada.";
+      }
+    }
+  </script>
+</head>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The find() Method</h1>
+
+<h2>Carros no estoque: Corvette, Camaro, e Lamborghini.</h2>
+
+
+
+<label class="btn1" for="carronome">Digite um Carro:</label>
+<input type="text" id="carroInput">
+<button class="btn2" onclick="Findcarro()">Procurar</button>
+
+<p id="demo">Informe um carro:</p>
+
+
+
+
+
+<script>
+
+  function Findcarro(){
+    const carros = ["Corvette", "Camaro", "Lamborghini"];
+    const userInput = document.getElementById("carroInput").value;
+
+    const foundCarro = carros.find((carro) => carro.toLowerCase() === userInput.toLowerCase());
+
+    if (foundCarro) {
+      document.getElementById("demo").textContent = "Encontrado: " + foundCarro;
+    } else {
+      document.getElementById("demo").textContent = "Carro não encontrado."
+    }
+  }
+
+</script>
+
+<style>
+  *{
+    align-items: center;
+    text-align: center;
+    background-color: #6ec172;
+    margin-top: 150px;
+  }
+
+  .btn1{
+    border-radius: 5px;
+  }
+
+  .btn2{
+    border-radius: 8px;
+    padding: 5px;
+
+  }
+
+  .btn2:hover{
+    background-color: #adc172;
+  }
+</style>
+
+
+
+</body>
+</html>
